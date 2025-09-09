@@ -1,0 +1,186 @@
+/* ----------  Minimal Yoshimitsu × Variable Palette  ---------- */
+
+:root {
+  /* light mode */
+  --font-color: #555;
+  --bg-color: #fff;
+  --link-color: #000;
+  /* dark mode */
+  --dark-font-color: #fff;
+  --dark-bg-color: #222222;
+  --dark-link-color: #138d75;
+
+  /* accent colour */
+  --accent-color: #48C9B0;
+}
+
+/* --------- Reset & Base --------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-family: 'Noto Sans TC', 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--font-color);
+  background: var(--bg-color);
+}
+body { margin: 0; }
+
+/* --------- Links --------- */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s;
+}
+a:hover { border-color: var(--link-color); color: var(--font-color); }
+
+body.dark-mode { background: var(--dark-bg-color); color: var(--dark-font-color); }
+body.dark-mode a { color: var(--dark-link-color); }
+body.dark-mode i { color: var(--dark-font-color); }
+
+/* --------- Header --------- */
+.site-header {
+  padding: 4rem 1rem 2.5rem;
+  text-align: center;
+}
+.site-header h1 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: .05em;
+  margin-bottom: 1rem;
+}
+.authors { font-size: .95rem; margin-bottom: .5rem; }
+.aff { font-size: .7rem; vertical-align: super; }
+.institutions { font-size: .85rem; color: #666; margin-bottom: 1.5rem; }
+
+/* --------- Buttons --------- */
+.links { margin-top: 1.5rem; }
+.btn {
+  display: inline-block;
+  margin: .25rem .4rem;
+  padding: .5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: .9rem;
+}
+.btn.disabled { opacity: .4; pointer-events: none; }
+.icon { margin-right: .35em; }
+
+/* --------- Main Layout --------- */
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+
+/* --- Sections --- */
+.abstract h2,
+.bibtex h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: .8rem;
+}
+.abstract p { margin-bottom: 1rem; word-wrap: break-word; }
+
+pre {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: .8rem;
+}
+
+/* --------- Footer --------- */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: .75rem;
+  color: #666;
+  padding: 2rem 0;
+}
+
+/* --------- Typography defaults --------- */
+h1 { font-size: 24px; margin: 0 0 24px; }
+h2 { font-size: 20px; margin: 0 0 24px; }
+h3, h4, h5, h6 { font-weight: 500; margin: 0 0 24px; }
+ul, ol, table, pre, dl { margin: 0 0 20px; list-style: circle; }
+ul { padding-left: 30px; }
+
+/* --------- Tables --------- */
+table { width: 100%; border-collapse: collapse; border-spacing: 0 20px; }
+th, td { text-align: left; padding: 5px 16px; border-bottom: 1px solid #e5e5e5; vertical-align: middle; }
+th { color: #444; font-weight: 500; }
+
+table, tr, td { border: none; }
+
+/* --------- Misc --------- */
+img { width: 100%; height: auto; }
+strong { font-weight: 1000; }
+small { font-size: 14px; }
+button { background: transparent; border: none; cursor: pointer; outline: none; }
+i { font-size: 16px; color: var(--font-color); padding: 4px; }
+tiny { font-size: 12px; }
+hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
+
+/* --------- Flex helpers (optional) --------- */
+.flex-container { display: flex; flex-wrap: wrap; padding: 1rem 0 2rem; }
+.flex-left { flex: 60%; }
+.flex-right { flex: 20%; line-height: 1; }
+
+.paper-links a { text-decoration: underline; padding-right: 10px; }
+.paper-title { font-weight: bold; }
+.paper-summary { font-size: 12px; font-style: italic; }
+.paper { padding-left: 0; }
+.circular-square { border-radius: 50%; }
+
+#title { float: left; display: flex; align-items: flex-end; }
+#socials { float: right; padding-top: 9px; }
+.info-links { text-align: center; padding: 1em 0; }
+
+/* --------- Responsive tweaks --------- */
+@media (max-width: 780px) {
+  html { font-size: 13px; }
+  .site-header { padding: 3rem 1rem 2rem; }
+  .site-header h1 { font-size: 1.8rem; }
+  main { padding: 1.5rem .75rem 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 12px; }
+  .site-header h1 { font-size: 1.5rem; }
+  .authors, .institutions { line-height: 1.4; }
+  .links { display: flex; flex-wrap: wrap; justify-content: center; }
+  .btn { margin: .25rem .25rem; padding: .45rem .8rem; }
+}
+
+@media print {
+  body { padding: .4in; font-size: 12pt; color: #444; }
+}
+
+
+.teaser-figure {
+  margin: -3em 0 1.5em 0; /* top | right | bottom | left */
+}
+
+.teaser-figure img {
+  width: 100%;   /* Fill the container width */
+  height: auto;  /* Maintain aspect ratio */
+  display: block;
+}
+
+.figure {
+  width: 80%;          /* take up 80% of the container width */
+  margin: 1.5em auto;  /* vertical spacing + center horizontally */
+  display: block;      /* ensures it behaves like a block element */
+  text-align: center;  /* center-align inner text/images */
+}
+
+.figure img{
+  width: 80%;          /* take up 80% of the container width */
+  margin: 1.5em auto;  /* vertical spacing + center horizontally */
+  display: block;      /* ensures it behaves like a block element */
+  text-align: center;  /* center-align inner text/images */
+}
