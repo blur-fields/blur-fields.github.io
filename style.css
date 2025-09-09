@@ -181,14 +181,14 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
 }
 
 .figure {
-  width: 80%;          /* take up 80% of the container width */
+  width: 90%;          /* take up 80% of the container width */
   margin: 1.5em auto;  /* vertical spacing + center horizontally */
   display: block;      /* ensures it behaves like a block element */
   text-align: center;  /* center-align inner text/images */
 }
 
 .figure img{
-  width: 80%;          /* take up 80% of the container width */
+  width: 90%;          /* take up 80% of the container width */
   margin: 1.5em auto;  /* vertical spacing + center horizontally */
   display: block;      /* ensures it behaves like a block element */
   text-align: center;  /* center-align inner text/images */
