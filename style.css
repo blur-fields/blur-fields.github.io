@@ -171,6 +171,15 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
   display: block;
 }
 
+.teaser-figure figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  text-align: center;  /* center-align inner text/images */
+
+}
+
 .figure {
   width: 80%;          /* take up 80% of the container width */
   margin: 1.5em auto;  /* vertical spacing + center horizontally */
@@ -184,3 +193,19 @@ hr { border: 0; background: #e5e5e5; height: 1px; margin: 0 0 20px; }
   display: block;      /* ensures it behaves like a block element */
   text-align: center;  /* center-align inner text/images */
 }
+
+.figure figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  text-align: center;  /* center-align inner text/images */
+
+}
+
+ol {
+  list-style-type: decimal;  /* ensures numbers instead of bullets */
+  margin-left: 1rem;         /* indent from the left */
+  padding-left: 1rem;        /* space between numbers and text */
+}
+
